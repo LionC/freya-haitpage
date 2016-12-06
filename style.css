@@ -204,9 +204,11 @@ section.success-stories > div {
     justify-content: space-around;
 
     width: 440px;
-    background-color: #DDDDDD;
 
     padding: 10px;
+
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 section.success-stories > div > img {
