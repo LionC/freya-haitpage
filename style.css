@@ -1,0 +1,284 @@
+/*
+* Resets
+*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a, a:hover, a:active {
+    text-decoration: underline;
+    color: inherit;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/*
+* Typography
+*/
+
+html, body {
+    line-height: 1.43;
+    font-size: 21px;
+    font-family: 'Pompiere', cursive;
+    font-weight: 300;
+    color: #333328;
+}
+
+@media only screen and (min-width : 970px) {
+    html, body {
+        font-size: 19px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.15em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: .85em;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/*
+* Images
+*/
+
+img {
+    vertical-align: middle;
+}
+
+img.circle {
+    border-radius: 50%;
+}
+
+/*
+* Header
+*/
+
+header {
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("hair1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+header {
+    position: relative;
+}
+
+header > div.container {
+    padding: 150px 0 150px 0;
+
+    text-align: center;
+    color: white;
+}
+
+header {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+@media only screen and (min-width : 970px) {
+    header {
+        font-size: 28px;
+    }
+}
+
+/*
+* Footer
+*/
+
+footer {
+    background-color: #f0f0f0;
+    min-height: 55px;
+}
+
+/*
+* Content
+*/
+
+main {
+    background-color: white;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 15px;
+}
+
+@media only screen and (min-width : 970px) {
+    main section {
+        flex-direction: row;
+
+        padding-right: calc(50% - 485px);
+        padding-left: calc(50% - 485px);
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+main section:nth-of-type(2) {
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("hair2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    color: white;
+
+    min-height: 300px;
+}
+
+section.img-text-pair, section.product {
+    justify-content: flex-start;
+}
+
+section.img-text-pair img, section.product img {
+    width: 100%;
+}
+
+@media only screen and (min-width : 970px) {
+    section.img-text-pair img, section.product img {
+        width: auto;
+        height: 300px;
+        padding: 0px 50px;
+
+        flex-direction: column;
+    }
+
+    section.img-text-pair:nth-child(odd), section.product:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+}
+
+section.success-stories > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 440px;
+    background-color: #DDDDDD;
+
+    padding: 10px;
+}
+
+section.success-stories > div > img {
+    margin-right: 20px;
+    width: 20%;
+    height: auto;
+}
+
+section.insta-gallery {
+    align-items: flex-start;
+}
+
+section.insta-gallery > div {
+  width: 33%;
+}
+
+section.insta-gallery > div + div {
+  padding-left: 2px;
+}
+
+@media only screen and (min-width : 970px) {
+
+}
+
+@media screen and (max-width: 975px) {
+  section.insta-gallery > div {
+    width: 100%;
+  }
+
+  section.insta-gallery > div > figure > figcaption {
+      flex-direction: column;
+      justify-content: flex-end;
+
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .6));
+  }
+}
+
+section.insta-gallery > div > figure {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+
+section.insta-gallery > div > figure + figure {
+    margin-top: 2px;
+}
+
+section.insta-gallery > div > figure > img {
+  display: block;
+  width: 100%;
+}
+
+section.insta-gallery > div > figure > figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, .45);
+
+  color: white;
+  font-size: 2.6em;
+
+  opacity: 0;
+  transition: opacity .4s ease-out;
+}
+
+section.insta-gallery > div > figure:hover > figcaption {
+  opacity: 1;
+}
