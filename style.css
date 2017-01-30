@@ -98,7 +98,7 @@ img.circle {
 */
 
 header {
-    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("hair1.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("hair3.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -125,6 +125,53 @@ header {
     header {
         font-size: 28px;
     }
+}
+
+/*
+* Form
+*/
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    max-width: 550px;
+}
+
+form label {
+    display: block;
+    width: 245px;
+}
+
+label, textarea, button {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+input, textarea, button {
+    border: 2px solid black;
+    border-radius: 6px;
+    outline: none;
+    font-family: 'Pompiere', cursive;
+}
+
+input, textarea {
+    width: 100%;
+    display: block;
+    padding: 9px;
+    font-size: 1.1em;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1.3em;
+    text-transform: uppercase;
 }
 
 /*
@@ -156,6 +203,7 @@ main section {
 @media only screen and (min-width : 970px) {
     main section {
         flex-direction: row;
+        flex-wrap: wrap;
 
         padding-right: calc(50% - 485px);
         padding-left: calc(50% - 485px);
@@ -164,8 +212,7 @@ main section {
     }
 }
 
-main section:nth-of-type(2) {
-    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("hair2.jpeg");
+main > div {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -176,24 +223,50 @@ main section:nth-of-type(2) {
     min-height: 300px;
 }
 
-section.img-text-pair, section.product {
+main > div:nth-of-type(1) {
+    background-image: url("hair2.jpeg");
+}
+
+main > div:nth-of-type(2) {
+    background-image: url("hair4.jpeg");
+}
+
+main > img {
+    display: block;
+
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+section > h2 {
+    text-align: center;
+    flex-basis: 100%;
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+
+section.img-text-pair {
     justify-content: flex-start;
 }
 
-section.img-text-pair img, section.product img {
+section.img-text-pair img {
     width: 100%;
 }
 
 @media only screen and (min-width : 970px) {
-    section.img-text-pair img, section.product img {
+    section.img-text-pair {
+        flex-wrap: nowrap;
+    }
+
+    section.img-text-pair img {
         width: auto;
         height: 300px;
         padding: 0px 50px;
-
-        flex-direction: column;
     }
 
-    section.img-text-pair:nth-child(odd), section.product:nth-child(odd) {
+    section.img-text-pair:nth-child(odd) {
         flex-direction: row-reverse;
     }
 }
@@ -222,7 +295,7 @@ section.insta-gallery {
 }
 
 section.insta-gallery > div {
-  width: 33%;
+  width: 33.3333333%;
 }
 
 section.insta-gallery > div + div {
@@ -283,4 +356,32 @@ section.insta-gallery > div > figure > figcaption {
 
 section.insta-gallery > div > figure:hover > figcaption {
   opacity: 1;
+}
+
+@media only screen and (min-width : 970px) {
+    section.form {
+        display: block;
+
+        padding-right: calc(50% - 275px);
+        padding-left: calc(50% - 275px);
+    }
+}
+
+@media only screen and (min-width : 970px) {
+    section.how {
+        align-items: flex-start;
+    }
+
+    section.how > div {
+        width: 29%;
+        text-align: center;
+    }
+
+    section.how > div > p {
+        text-align: left;
+    }
+
+    section.how > div > img {
+        height: 170px;
+    }
 }
