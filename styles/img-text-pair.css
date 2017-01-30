@@ -1,0 +1,25 @@
+/*
+* Image Text Pair
+*/
+
+section.img-text-pair {
+    justify-content: flex-start;
+
+    & > img {
+        width: 50%%;
+    }
+
+    @media (--desktop) {
+        flex-wrap: nowrap;
+
+        & > img {
+            width: auto;
+            height: 300px;
+            padding: 0px 50px;
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+    }
+}
