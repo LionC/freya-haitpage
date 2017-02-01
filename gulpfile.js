@@ -6,7 +6,7 @@ var concat = require('gulp-concat')
 const POSTCSS_PROCESSORS = [ require('postcss-cssnext')() ]
 
 gulp.task('styles', function() {
-    return gulp.src('styles/*.css')
+    return gulp.src(['styles/style.css', 'styles/*.css'])
         .pipe(concat('style.min.css'))
         .pipe(postcss(POSTCSS_PROCESSORS))
         .pipe(minifyCss())

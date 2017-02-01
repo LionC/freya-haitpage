@@ -1,0 +1,97 @@
+/*
+* Navigation
+*/
+
+@@media (--desktop) {    
+    body {
+        margin-top: 65px;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 100vw;
+    top: 0;
+    z-index: 100;
+
+    width: 85vw;
+    height: 100vh;
+
+    background-color: white;
+    border-left: 2px solid black;
+
+    font-size: 1.2em;
+
+    transition: transform .22s ease-in;
+
+    &.open {
+        transform: translate(-85vw, 0);
+
+        &::before {
+            opacity: .7;
+        }
+    }
+
+    &::before {
+        display: block;
+        content: "";
+
+        position: absolute;
+        pointer-events: none;
+        right: 85vw;
+        top: 0;
+        z-index: 100;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: black;
+
+        opacity: 0;
+
+        transition: opacity .22s ease-in;
+
+        @media (--desktop) {
+            display: none;
+        }
+    }
+
+    @media (--desktop) {
+        left: 0;
+        height: 65px;
+        width: 100vw;
+
+        border-left: none;
+        border-bottom: 2px solid black;
+    }
+
+    & > ul {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @media (--desktop) {
+            flex-direction: row;
+        }
+
+        & a {
+            &, &:hover, &:active {
+                text-decoration: none;
+            }
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}

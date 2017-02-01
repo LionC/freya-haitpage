@@ -38,16 +38,15 @@ button {
 
 html, body {
     line-height: 1.43;
-    font-size: 21px;
+    font-size: 22px;
     font-family: 'Pompiere', cursive;
     font-weight: 300;
     color: #333328;
-
-    @media (--desktop) {
-        font-size: 19px;
-    }
 }
 
+p, ul {
+    font-size: 1.1em;
+}
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
@@ -98,7 +97,6 @@ img {
         border-radius: 50%;
     }
 }
-
 
 /*
 * Header
