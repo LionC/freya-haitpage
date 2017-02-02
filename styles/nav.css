@@ -2,9 +2,9 @@
 * Navigation
 */
 
-@@media (--desktop) {    
+@media (--desktop) {
     body {
-        margin-top: 65px;
+        margin-top: 70px;
     }
 }
 
@@ -46,7 +46,7 @@ nav {
         z-index: 100;
 
         width: 100vw;
-        height: 100vh;
+        height: auto;
 
         background-color: black;
 
@@ -61,7 +61,7 @@ nav {
 
     @media (--desktop) {
         left: 0;
-        height: 65px;
+        height: 70px;
         width: 100vw;
 
         border-left: none;
@@ -77,6 +77,7 @@ nav {
         justify-content: space-around;
 
         list-style: none;
+        height: 100%;
         padding: 0;
         margin: 0;
 
@@ -84,14 +85,26 @@ nav {
             flex-direction: row;
         }
 
-        & a {
-            &, &:hover, &:active {
-                text-decoration: none;
-            }
+        &  > li {
+            & > a {
+                display: block;
 
-            &.active {
-                text-decoration: underline;
+                margin: 0;
+                padding: 0 20px;
+
+
+                border-radius: 6px;
+
+                &, &:hover, &:active {
+                    text-decoration: none;
+                }
+
+                &.active {
+                    font-weight: bold;
+                    font-size: 1.3em;
+                }
             }
         }
+
     }
 }

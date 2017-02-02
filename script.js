@@ -41,7 +41,7 @@ function highlightNavigation() {
 
     $navigationLinks.each(function() {
         var currentSection = $(this.hash)
-        var sectionTop = currentSection.offset().top - 200
+        var sectionTop = currentSection.offset().top - 300
 
         if (scrollPosition >= sectionTop) {
             var act = $(this)
