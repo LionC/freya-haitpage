@@ -15,9 +15,24 @@ body > nav + button {
     right: 15px;
     z-index: 100;
 
+    margin: 0;
+    padding: 6px 10px;
+
+    opacity: 1;
+
+    transition: opacity .1s ease-out;
+
+    & > img {
+        width: 40px;
+    }
+
     @media (--desktop) {
         display: none;
     }
+}
+
+body > nav.open + button {
+    opacity: 0;
 }
 
 nav {
