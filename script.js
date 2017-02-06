@@ -6,7 +6,7 @@ $('a[href^=\\#]').on('click', function(e) {
     var hash = this.hash
 
     root.animate(
-        { scrollTop: $(hash).offset().top - 20 },
+        { scrollTop: $(hash).offset().top - 40 },
         700,
         function() {
             window.location.hash = hash
@@ -41,7 +41,7 @@ function highlightNavigation() {
 
     $navigationLinks.each(function() {
         var currentSection = $(this.hash)
-        var sectionTop = currentSection.offset().top - 300
+        var sectionTop = currentSection.offset().top - 340
 
         if (scrollPosition >= sectionTop) {
             var act = $(this)
