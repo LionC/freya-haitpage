@@ -2,12 +2,6 @@
 * Navigation
 */
 
-@media (--desktop) {
-    body {
-        margin-top: 70px;
-    }
-}
-
 body > nav + button {
     position: fixed;
     display: block;
@@ -48,12 +42,34 @@ nav {
     height: 100vh;
 
     background-color: white;
+    color: black;
     border-left: 2px solid black;
 
     font-size: 1.1em;
     text-transform: uppercase;
 
     transition: transform .22s ease-in;
+
+    @media (--desktop) {
+        left: 0;
+        height: 95px;
+        width: 100vw;
+
+        background-color: transparent;
+        color: white;
+
+        border-left: none;
+        border-bottom: 2px solid transparent;
+
+        transition: height .22s ease-in, background-color .22s ease-in-out, color .22s ease-in-out, border-color .22s ease-in-out;
+
+        &.scrolled {
+            height: 70px;
+            color: black;
+            background-color: white;
+            border-color: initial;
+        }
+    }
 
     &.open {
         transform: translate(-85vw, 0);
@@ -87,14 +103,6 @@ nav {
         }
     }
 
-    @media (--desktop) {
-        left: 0;
-        height: 70px;
-        width: 100vw;
-
-        border-left: none;
-        border-bottom: 2px solid black;
-    }
 
     & > ul {
         flex-grow: 1;
@@ -131,7 +139,7 @@ nav {
 
                 &.active {
                     font-weight: bold;
-                    border-color: rgba(0,0,0,.7);
+                    border-color: initial;
                 }
             }
         }

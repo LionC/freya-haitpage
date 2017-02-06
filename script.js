@@ -14,6 +14,15 @@ $('a[href^=\\#]').on('click', function(e) {
     )
 })
 
+var nav = $('nav');
+
+function checkNavScrolled() {
+    if ((document.documentElement.scrollTop || document.body.scrollTop) > 120)
+        nav.addClass('scrolled');
+    else
+        nav.removeClass('scrolled');
+}
+
 var $navigationLinks = $($('nav > ul > li > a[href^=\\#]').get().reverse())
 
 function throttle(fn, interval) {
@@ -56,4 +65,9 @@ function highlightNavigation() {
     })
 }
 
-$(window).scroll( throttle(highlightNavigation,100) )
+function doScrollStuff() {
+    highlightNavigation()
+    checkNavScrolled()
+}
+
+$(window).scroll( throttle(doScrollStuff, 100) )
