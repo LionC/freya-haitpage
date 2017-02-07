@@ -70,4 +70,6 @@ function doScrollStuff() {
     checkNavScrolled()
 }
 
+highlightNavigation()
+
 $(window).scroll( throttle(doScrollStuff, 100) )
