@@ -18,9 +18,9 @@ var nav = $('nav');
 
 function checkNavScrolled() {
     if ((document.documentElement.scrollTop || document.body.scrollTop) > 120)
-        nav.addClass('scrolled');
+        nav.addClass('scrolled')
     else
-        nav.removeClass('scrolled');
+        nav.removeClass('scrolled')
 }
 
 var $navigationLinks = $($('nav > ul > li > a[href^=\\#]').get().reverse())

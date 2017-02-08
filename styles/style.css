@@ -152,11 +152,18 @@ header {
     font-size: 24px;
     font-weight: 300;
 
+    padding: 30px 15px;
+
     & > div.container {
         padding: 150px 0 150px 0;
 
         text-align: center;
         color: white;
+
+        & h1 {
+            font-size: 1.4em;
+            margin: 1.3em 0;
+        }
     }
 
     @media (--desktop) {

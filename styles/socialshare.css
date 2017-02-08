@@ -1,49 +1,53 @@
 aside.socialshare {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    display: none;
 
-    position: fixed;
-    top: 50%;
-    left: 0;
-    z-index: 2;
+    @media (--desktop) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
 
-    width: 5vw;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        z-index: 2;
 
-    padding: 10px;
+        width: 5vw;
 
-    text-align: center;
+        padding: 10px;
 
-    & a {
-        position: relative;
+        text-align: center;
 
-        & > div.tooltip {
-            display: block;
+        & a {
+            position: relative;
 
-            position: absolute;
-            left: 107%;
-            top: 5px;
+            & > div.tooltip {
+                display: block;
 
-            font-size: 1.19em;
-            color: grey;
+                position: absolute;
+                left: 107%;
+                top: 5px;
 
-            pointer-events: none;
+                font-size: 1.19em;
+                color: grey;
 
-            opacity: 0;
-            transition: opacity .3s ease-in;
-        }
+                pointer-events: none;
 
-        &:hover > div.tooltip {
-            opacity: 1;
-        }
+                opacity: 0;
+                transition: opacity .3s ease-in;
+            }
 
-        & img {
-            width: 100%;
-            filter: grayscale(100%);
+            &:hover > div.tooltip {
+                opacity: 1;
+            }
 
-            & + img {
-                margin-top: 5px;
+            & img {
+                width: 100%;
+                filter: grayscale(100%);
+
+                & + img {
+                    margin-top: 5px;
+                }
             }
         }
     }
