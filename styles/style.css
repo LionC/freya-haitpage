@@ -19,7 +19,7 @@ html, body {
     box-sizing: border-box;
 }
 
-a, a:hover, a:active {
+a, a:hover, a:active, a:visited {
     text-decoration: underline;
     color: inherit;
 }
@@ -163,6 +163,17 @@ header {
         & h1 {
             font-size: 1.4em;
             margin: 1.3em 0;
+        }
+
+        & > a {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            padding: 12px 20px;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            border: 2px solid;
+            border-radius: 6px;
+            text-decoration: none;
         }
     }
 
