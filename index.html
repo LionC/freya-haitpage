@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
@@ -145,18 +145,18 @@
                 Frage mich an!
             </h2>
 
-            <form>
+            <form method="POST" action="http://formspree.io/me@lionc.de">
                 <label>
                     E-Mail
-                    <input type="text" required>
+                    <input type="email" name="email" required>
                 </label>
 
                 <label>
                     Name
-                    <input type="text" required>
+                    <input type="text" name="name" required>
                 </label>
 
-                <textarea placeholder="Deine Nachricht..." rows="8" cols="64" required></textarea>
+                <textarea name="message" placeholder="Deine Nachricht..." rows="8" cols="64" required></textarea>
 
                 <button type="submit">Anfrage Senden</button>
             </form>
