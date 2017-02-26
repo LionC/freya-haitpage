@@ -29,7 +29,7 @@ aside.socialshare {
                 top: 5px;
 
                 font-size: 1.19em;
-                color: grey;
+                color: #666;
 
                 pointer-events: none;
 
@@ -43,7 +43,7 @@ aside.socialshare {
 
             & img {
                 width: 100%;
-                filter: grayscale(100%);
+                filter: grayscale(100%) brightness(75%);
 
                 & + img {
                     margin-top: 5px;
