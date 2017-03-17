@@ -141,6 +141,10 @@ blockquote {
 */
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("hair3.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -154,9 +158,9 @@ header {
 
     padding: 30px 15px;
 
-    & > div.container {
-        padding: 150px 0 150px 0;
+    min-height: 100vh;
 
+    & > div.container {
         text-align: center;
         color: white;
 
