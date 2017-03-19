@@ -1,12 +1,14 @@
 var root = $('html, body')
 
+var scrollOffset = $(window).width() > 960 ? 40 : 0
+
 $('a[href^=\\#]').on('click', function(e) {
     e.preventDefault()
 
     var hash = this.hash
 
     root.animate(
-        { scrollTop: $(hash).offset().top - 40 },
+        { scrollTop: $(hash).offset().top - scrollOffset },
         700,
         function() {
             window.location.hash = hash
